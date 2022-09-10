@@ -243,14 +243,14 @@ const reply = (teks) => {
 	  //antilink\\
         if (db.data.chats[m.chat].antilink) {
         if (budy.match(`chat.whatsapp.com`)) {
-        reply(`❦ANTI LINK ❦\n\nYou have been detected sending a group link, sorry you will be kicked !`)
-        if (!isBotAdmins) return reply(`I Am Not An Admin, How Could I Kick Somebody Who Send Link 😒`)
+        reply(`ANTI LINK SYSTEM \n\nTod Jangan Kirim Link Anjeng Gw Kick Lu Bgst`)
+        if (!isBotAdmins) return reply(`Gw mau ngekick dia sih cuma apalah daya ku bukan admin:(`)
         let gclink = (`https://chat.whatsapp.com/`+await GojoMdNx.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
         let isgclink = isLinkThisGc.test(m.text)
-        if (isgclink) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Sent This Group Link❤️`)
-        if (isAdmins) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Are An Admin Of The Group❤️`)
-        if (isCreator) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Are My Owner Hahahahah🤣😘, You Think I Will Betray You Huh🔮`)
+        if (isgclink) return reply(`Gw sebenarnya mau ngekick lu sih , tapi km ngirimn nya link gc ini :v`)
+        if (isAdmins) return reply(`mo ngekick lu sih tapi lu admin...`)
+        if (isCreator) return reply(`maafkan saya tuan , saya hampir mengluarkan anda , saya minta maaf`)
         GojoMdNx.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         }
@@ -578,21 +578,20 @@ if (q.includes('--help')) return reply(examkosong)
      
      var GojoMdNx = await getBuffer(picak+`User's Inventory`)
      let teksehmazeh = `_[ 👩🏻‍💼INFO USER👨🏻‍💼 ]_\n\n`
-     teksehmazeh += `*❤️Your Blood* : ${getDarah(m.sender)}\n`
-     teksehmazeh += `*◻️️Your Iron* : ${getBesi(m.sender)}\n`
-     teksehmazeh += `*🌟Your Gold* : ${getEmas(m.sender)}\n`
-     teksehmazeh += `*💎Your Emerald* : ${getEmerald(m.sender)}\n`
-     teksehmazeh += `*⏺️Your Limit* : ${getLimit(m.sender)}\n`
-     teksehmazeh += `*🧪Your Potion* : ${getPotion(m.sender)}\n\n`
-     teksehmazeh += `_[ 🐺HUNT RESULT🐺 ]_\n`
-     teksehmazeh += `*🐟Fish* : ${getIkan(m.sender)}\n`
-     teksehmazeh += `*🐔Chicken* : ${getAyam(m.sender)}\n`
-     teksehmazeh += `*🐇Rabbit* : ${getKelinci(m.sender)}\n`
-     teksehmazeh += `*🐑Sheep* : ${getDomba(m.sender)}\n`
-     teksehmazeh += `*🐄Cow* : ${getSapi(m.sender)}\n`
-     teksehmazeh += `*🐘Elephant* : ${getGajah(m.sender)}\n\n`
+     teksehmazeh += `*❤️HP Mu* : ${getDarah(m.sender)}\n`
+     teksehmazeh += `*◻️️Besi* : ${getBesi(m.sender)}\n`
+     teksehmazeh += `*🌟Emas* : ${getEmas(m.sender)}\n`
+     teksehmazeh += `*💎Zambrut* : ${getEmerald(m.sender)}\n`
+     teksehmazeh += `*⏺️Limit* : ${getLimit(m.sender)}\n`
+     teksehmazeh += `*🧪Potion* : ${getPotion(m.sender)}\n\n`
+     teksehmazeh += `_[ 🐺Hasil Berburu🐺 ]_\n`
+     teksehmazeh += `*🐟Ikan* : ${getIkan(m.sender)}\n`
+     teksehmazeh += `*🐔Ayam* : ${getAyam(m.sender)}\n`
+     teksehmazeh += `*🐇Kelinci* : ${getKelinci(m.sender)}\n`
+     teksehmazeh += `*🐑Domba* : ${getDomba(m.sender)}\n`
+     teksehmazeh += `*🐄Sapi* : ${getSapi(m.sender)}\n`
+     teksehmazeh += `*🐘Gajah* : ${getGajah(m.sender)}\n\n`
      teksehmazeh += `_*${pushname}*_`
-     await GojoMdNx.send5ButImg(from, `` + '' + teksehmazeh, `© ${footer}`, GojoMdNx, [{"urlButton": {"displayText": "YOUTUBE","url": `${myweb}`}}])
   }
   break
         case 'userlimit': 
@@ -609,12 +608,12 @@ if (q.includes('--help')) return reply(examkosong)
    let txt = `❦*LEADERBOARD* ❦\n\n`
      for (let i of _buruan){
      txt += `➸ *ID :* ${i.id}\n`
-     txt += `*🐟Fish* : ${i.ikan}\n`
-     txt += `*🐔Chicken* : ${i.ayam}\n`
-     txt += `*🐇Rabbit* : ${i.kelinci}\n`
-     txt += `*🐑Sheep* : ${i.domba}\n`
-     txt += `*🐄Cow* : ${i.sapi}\n`
-     txt += `*🐘Elephant* : ${i.gajah}\n\n`
+     txt += `*🐟Ikan* : ${i.ikan}\n`
+     txt += `*🐔Ayam* : ${i.ayam}\n`
+     txt += `*🐇Kelinci* : ${i.kelinci}\n`
+     txt += `*🐑Domba* : ${i.domba}\n`
+     txt += `*🐄Sapi* : ${i.sapi}\n`
+     txt += `*🐘Gajah* : ${i.gajah}\n\n`
      }
     reply(txt)       
   }
@@ -630,12 +629,12 @@ if (q.includes('--help')) return reply(examkosong)
   var emasnya = emas[Math.floor(Math.random() * emas.length)]  
   var emeraldnya = emerald[Math.floor(Math.random() * emerald.length)]  
   setTimeout( () => {
-  let caption = `[ MINING RESULT ]\n*Iron* : ${besinya}\n*Gold* : ${emasnya}\n*Emerald* : ${emeraldnya}`
+  let caption = `[ HASIL NAMBANG ]\n*Besi* : ${besinya}\n*Emas* : ${emasnya}\n*Zambrut* : ${emeraldnya}`
   let buttons = [
       {
        buttonId: `${prefix + command}`, 
        buttonText: {
-        displayText: 'MINE AGAIN️'
+        displayText: 'Nambang Lagi'
       }, type: 1},
     ]
     let buttonMessage = {
@@ -649,7 +648,7 @@ if (q.includes('--help')) return reply(examkosong)
    
    }, 7000)  
   setTimeout( () => {
-  reply(`@${m.sender.split("@")[0]} Started Mining🎣`)     
+  reply(`@${m.sender.split("@")[0]} Sedang Menambang..🎣`)     
   }, 1500)
   kurangDarah(m.sender, 10)
   addBesi(m.sender, besinya)
@@ -663,80 +662,81 @@ if (q.includes('--help')) return reply(examkosong)
  if (!isInventoriBuruan){ addInventoriBuruan(m.sender) } 
  if (!isInventoryMonay){ addInventoriMonay(m.sender) }
  if (!isInventory){ addInventori(m.sender) }
- if (!q) return reply(`What Do You Want To Buy?\n\n1.potion\n2.baitfood\n3.limit\n\nExample: ${prefix + command} baitfood`)
+ if (!q) return reply(`Mau Beli Apa?\n\n1.ramuan\n2.umpanikan\n3.limit\n\nExample: ${prefix + command} umpanikan`)
  var anu = args[1]
-  if (args[0] === 'potion'){
+  if (args[0] === 'ramuan'){
   let noh = 100000 * anu
  if (!args[1]) return reply(`Example : ${prefix + command} potion 2\n 1 Potion = 100000 Money`)
- if (isMonay < noh) return reply('Your Remaining Money Is Not Sufficient For This Purchase')
+ if (isMonay < noh) return reply('Uang mu ga cukup jir')
  kurangMonay(m.sender, noh)
  var apalu = anu * 1
  addPotion(m.sender, apalu)
   setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Potion* : ${getPotion(m.sender)}`)
+  reply(`Transaksi Selesai ✔️\n*Sisa Uang Mu* : ${getMonay(m.sender)}\n*Ramuan Mu* : ${getPotion(m.sender)}`)
   }, 2000) 
  } else 
- if (args[0] === 'baitfood'){
+ if (args[0] === 'umpangikan'){
   let noh = 5000 * anu
- if (!args[1]) return reply(`Example : ${prefix + command} baitfood 2\n 1 Bait Food = 2500 Money`)
- if (isMonay < noh) return reply('Your Remaining Money Is Not Sufficient For This Purchase')
+ if (!args[1]) return reply(`Example : ${prefix + command} umpanikan 2\n 1 Umpan Ikan = 2500 Money`)
+ if (isMonay < noh) return reply('uang mu ga cukup lel')
  kurangMonay(m.sender, noh)
  var apalu = anu * 1
  addUmpan(m.sender, apalu)
   setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Bait Food* : ${getUmpan(m.sender)}`)
+  reply(`Transaksi Berhasil ✔️\n*Sisa Uang Mu* : ${getMonay(m.sender)}\n*Umpan Ikan Mu* : ${getUmpan(m.sender)}`)
   }, 2000) 
   } else 
   if (args[0] === 'limit'){
   let noh = 35000 * anu
  if (!args[1]) return reply(`Example : ${prefix + command} limit 2\n 1 Limit = 35000 Money`)
- if (isMonay < noh) return reply('Your Remaining Money Is Not Sufficient For This Purchase')
+ if (isMonay < noh) return reply('uang mu g ckup')
  kurangMonay(m.sender, noh)
  var apalu = anu * 1
  addLimit(m.sender, apalu)
   setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Limit* : ${getLimit(m.sender)}`)
+  reply(`Transaksi Berhasil ✔️\n*Sisa Uang Mu* : ${getMonay(m.sender)}\n*Limit Mu* : ${getLimit(m.sender)}`)
   }, 2000) 
   } else { reply("Incorrect Format!") }
  }
  break
  case 'sel': case 'jual':{
- if (!q) return  reply(`What Do You Want To Sell??\nExample : ${prefix + command} fish 2`)
+ if (!q) return  reply(`Mau Jual Apa??\nExample : ${prefix + command} ikan 2`)
  if (!isInventoriBuruan){ addInventoriBuruan(m.sender) } 
  if (!isInventoryMonay){ addInventoriMonay(m.sender) }
  if (!isInventory){ addInventori(m.sender) }
  var anu = args[1]
- if (args[0] === 'fish'){
- if (isIkan < anu) return reply(`You Don't Have Enough Fish(es) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} fish 2\n 1 Fish = 1500 Money`)
+ if (args[0] === 'ikan'){
+ if (isIkan < anu) return reply(`ikan mu ga sebanyak itu untuk ngelakuin transaksi ini`)
+ if (!args[1]) return reply(`Example : ${prefix + command} fish 2\n 1 ikan = 1500 Money`)
  kurangIkan(m.sender, anu)
  let monaynya = 1500 * anu
  addMonay(m.sender, monaynya)
   setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Fish(es)* : ${getIkan(m.sender)}`)
+  reply(`Transaksi Berhasil ✔️\n*Sisa uang mu* : ${getMonay(m.sender)}\n*sisa ikan mu* : ${getIkan(m.sender)}`)
   }, 2000) 
  } else
- if (args[0] === 'chicken'){
- if (isAyam < anu) return reply(`You Don't Have Enough Chicken(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} chicken 2\n 1 Chicken = 2500 Money`)
+ if (args[0] === 'ayam'){
+ if (isAyam < anu) return reply(`ayam mu ga sebanyak itu untuk ngelakukan transaksi ini`)
+ if (!args[1]) return reply(`Example : ${prefix + command} chicken 2\n 1 ayam = 2500 Money`)
  kurangAyam(m.sender, anu)
  let monaynya = 2500 * anu
  addMonay(m.sender, monaynya)
   setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Chicken* : ${getAyam(m.sender)}`)
+  reply(`Transaksi Berhasil ✔️\n*Sisa Uang Mu* : ${getMonay(m.sender)}\n*sisa ayam mu* : ${getAyam(m.sender)}`)
   }, 2000) 
  } else
- if (args[0] === 'rabbit'){
- if (isKelinci < anu) return reply(`You Don't Have Enough Rabbit(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} rabbit 2\n 1 Rabbit = 3000 Money`)
+ if (args[0] === 'kelinci'){
+ if (isKelinci < anu) return reply(`kelinci mu gada/kurang`)
+ if (!args[1]) return reply(`Example : ${prefix + command} rabbit 2\n 1 kelinci = 3000 Money`)
  kurangKelinci(m.sender, anu)
  let monaynya = 3000 * anu
  addMonay(m.sender, monaynya)
   setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Rabbit(s)* : ${getKelinci(m.sender)}`)
+  reply(`Transaksi Berhasil ✔️\n*Sisa uang mu* : ${getMonay(m.sender)}\n*Sisa Kelinci mu* : ${getKelinci(m.sender)}`)
   }, 2000) 
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// (tanda)
  } else
- if (args[0] === 'sheep'){
+ if (args[0] === 'domba'){
  if (isDomba < anu) return reply(`You Don't Have Enough Sheep(s) For This Transaction`)
  if (!args[1]) return reply(`Example : ${prefix + command} domba 2\n 1 Sheep = 5000 money`)
  kurangDomba(m.sender, anu)
@@ -746,7 +746,7 @@ if (q.includes('--help')) return reply(examkosong)
   reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Sheep(s)* : ${getDomba(m.sender)}`)
   }, 2000) 
  } else
- if (args[0] === 'cow'){
+ if (args[0] === 'sapi'){
  if (isSapi < anu) return reply(`You Don't Have Enough Cow(s) For This Transaction`)
  if (!args[1]) return reply(`Example : ${prefix + command} cow 2\n 1 Cow = 10000 Money`)
  kurangSapi(m.sender, anu)
@@ -756,7 +756,7 @@ if (q.includes('--help')) return reply(examkosong)
   reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Cow(s)* : ${getSapi(m.sender)}`)
   }, 2000) 
  } else
- if (args[0] === 'elephant'){
+ if (args[0] === 'gajah'){
  if (isGajah < anu) return reply(`You Don't Have Enough Elephant(s) For This Transaction`)
  if (!args[1]) return reply(`Example : ${prefix + command} elephant 2\n 1 Elephant = 15000 Money`)
  kurangGajah(m.sender, anu)
@@ -766,7 +766,7 @@ if (q.includes('--help')) return reply(examkosong)
   reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Elephant(s)* : ${getGajah(m.sender)}`)
   }, 2000) 
  } else
- if (args[0] === 'iron'){
+ if (args[0] === 'besi'){
  if (isBesi < anu) return reply(`You Don't Have Enough Iron(s) For This Transaction`)
  if (!args[1]) return reply(`Example : ${prefix + command} iron 2\n 1 Iron = 15000 Money`)
  kurangBesi(m.sender, anu)
@@ -776,7 +776,7 @@ if (q.includes('--help')) return reply(examkosong)
   reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Iron(s)* : ${getBesi(m.sender)}`)
   }, 2000) 
  } else
- if (args[0] === 'gold'){
+ if (args[0] === 'emas'){
  if (isEmas < anu) return reply(`You Don't Have Enough Gold(s) For This Transaction`)
  if (!args[1]) return reply(`Example : ${prefix + command} gold 2\n 1 Gold = 50000 Money`)
  kurangEmas(m.sender, anu)
@@ -786,7 +786,7 @@ if (q.includes('--help')) return reply(examkosong)
   reply(`Transaction Successful ✔️\n*Your Money* : ${getMonay(m.sender)}\n*Your Remaining Gold(s)* : ${getEmas(m.sender)}`)
   }, 2000) 
  } else
- if (args[0] === 'emerald'){
+ if (args[0] === 'zambrut'){
  if (isEmerald < anu) return reply(`You Don't Have Enough Emerald(s) For This Transaction`)
  if (!args[1]) return reply(`Example : ${prefix + command} emerald 2\n 1 Emerald = 100000 Money`)
  kurangEmerald(m.sender, anu)
@@ -3333,7 +3333,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hi ${pushname}`,
-                    description: `           🔮  Please Choose The Menu 🔮\nQUEEN BIXBY MD IS AN MODIFIED VERSION OF THE GOJOSENSEI BOT .THANK FOR USING QUEEN BIXBY MD.THIS IS MULTIFUNCTIONAL WHATSAPP BOT SO DONT USE BOT FOR BAD THINGS\n\n`,
+                    description: `Bot Ini Adalah Recode/Rename Dari Bixby Bot (Recode By @Adit9Mercy)`,
                     buttonText: "Menu",
                     footerText: `${global.footer}`,
                     listType: "SINGLE_SELECT",

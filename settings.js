@@ -19,30 +19,30 @@ global.APIKeys = {
 }
 
 //customize settings\\
-global.owner = ['94711421243']
-global.premium = ['94711421243']
-global.ownernomer = '94711421243'
-global.ownername = 'Dark Alpha'
-global.botname = 'Bixby MD'
-global.footer = ' Qᴜᴇᴇɴ ʙɪxʙʏ ᴘᴜʙʟɪᴄ ᴇᴅɪᴛɪᴏɴ.'
-global.ig = 'https://github.com/darkalphaxteam'
-global.region = 'India, South India, Kerala'
+global.owner = ['6288234478588']
+global.premium = ['6288234478588']
+global.ownernomer = '6288234478588'
+global.ownername = 'Adit'
+global.botname = 'Adit'
+global.footer = 'VioonzBot'
+global.ig = 'https://instagram/adit.hda'
+global.region = 'Indonesia, Kalimantan Timur , Balikpapan'
 global.sc = 'https://github.com/darkalphaxteam/Queen-Bixby-MD'
-global.myweb = 'https://youtube.com/channel/UCvpyOCBCaBSCdv4QolnO0WQ'
-global.packname = 'Queen Bixby MD'
-global.author = 'Thinura '
+global.myweb = 'nhentai.net'
+global.packname = 'VioonzBot'
+global.author = 'By Adit'
 global.sessionName = 'session'
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '🚢'
 global.mess = {
-    success: 'Done ✓',
-    admin: 'This Feature Is Only For Admin!',
-    botAdmin: 'Bot Must Be Admin First!',
-    owner: 'This Feature Is Only For Owner!',
-    group: 'Feature Used Only For Groups!',
-    private: 'Features Used Only For Private Chat!',
-    bot: 'This Feature Is Only For Bot',
-    wait: 'Please Wait...',
+    success: 'Berhasil',
+    admin: 'Cuma Bisa Admin',
+    botAdmin: 'mau ku lakukan sih , tapi apalah dayaku bukan admin :(',
+    owner: 'Cuma Bisa Di Pake Adit',
+    group: 'Cuma Bisa Di pake di grup',
+    private: 'pc only',
+    bot: 'cuma gw yang bs pake',
+    wait: 'tunggu sbntr..',
     error: 'Error! Maybe Api Key Is Expired🤔!',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
 }
